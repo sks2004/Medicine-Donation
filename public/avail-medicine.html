@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>
+        Donor Profile
+    </title>
+
+    <script src="js/jquery-1.8.2.min.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+
+
+
+        <script>
+            function loadFile(ref) {
+              var image = document.getElementById('prevmed');
+              image.src = URL.createObjectURL(ref.files[0]);
+              
+          };
+        </script>
+
+</head>
+<body>
+
+    <!-- -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- -->
+    <nav class="navbar navbar-expand-lg bg-light">
+      <div class="container-fluid" style="background-color:#f08080;margin-top:-8px;height:70px;">
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item"><img src="pics/finallogo.png" class="img-thumbnail" style="width:69px; height:69px;color: #f08080; border-radius:32%;" alt="..."></li>
+          </ul>
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0" style="margin-left:-68%;">
+            <li class="nav-item"><h2>Post Medicine to Donate</h2></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+<!-- =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- -->
+
+    <div class="container">
+
+        <form method="post" class="row g-3" enctype="multipart/form-data" style="margin-top:1%;">
+
+            <input type="hidden" id="hdn" name="hdn">
+
+            <div class="row-mt-6">
+            <div class="col-md-6">
+                <label for="inputEmail4" class="form-label">Email</label>
+                <input type="text" class="form-control" name="txtemail" id="txtemail" style="background-color:#f8fea6;">
+                <!-- <label  class="form-label" id="errEmail">*</label>  -->
+            </div>
+            </div>
+
+            <div class="col-md-4">
+                <label for="inputAddress" class="form-label">Medicine Name</label>
+                <input type="text" class="form-control" id="txtmedicine" name="txtmedicine" style="background-color:#f8fea6;">
+            </div>
+
+            <div class="col-md-4">
+                <label for="txtpkg" class="form-label">Packaging</label>
+                <select name="txtpkg" id="txtpkg" class="form-select" style="background-color:#f8fea6;">
+                    <option selected>Select</option>
+                    <option>Tablets</option>
+                    <option>Tube</option>
+                    <option>Liquid</option>
+                    <option>Powder</option>
+                    <option>Spray</option>
+                </select>
+            </div>
+
+            <div class="col-md-4">
+                <label for="inputAddress" class="form-label">Quantity</label>
+                <input type="text" class="form-control" id="txtqty" name="txtqty" style="background-color:#f8fea6;">
+            </div>
+
+            <div class="col-md-4">
+                <label for="inputAddress" class="form-label">Expiry Date</label>
+                <input type="date" class="form-control" id="txtdate" name="txtdate" style="background-color:#f8fea6;">
+            </div>
+
+            <div class="col-md-4">
+                <label for="inputAddress" class="form-label">Company</label>
+                <input type="text" class="form-control" id="txtcompany" name="txtcompany" style="background-color:#f8fea6;">
+            </div>
+
+            <label for="inputState" class="form-label">Upload Pic</label>
+            <div class="col-md-3">
+                <input type="file" name="medpic" accept=".jpg, .jpeg, .png" onchange="loadFile(this);">
+            </div>
+            <div class="col-md" style="height:120px;margin-top:-17px;"> 
+                <img id="prevmed" src="" style="height:100% ;" alt="">
+            </div>
+
+            <div class="row-mt">
+            <div class="col-md">
+                <label for="txtdes" class="form-label">Description</label>
+                </div>
+                <input type="text" class="form-control" style="height:100px;background-color:#f8fea6;" id="txtdes" name="txtdes">
+            </div>
+
+            <br><br><br><br><br>
+            <div class="col-12">
+                <center>
+                    <input type="submit" formaction="/list-medicine" class="btn btn-outline-danger form-check" value="List the Medicine">
+                </center>
+            </div>
+
+        </form>
+    </div>
+
+    <div style="width:100%;float:left; margin-top:1%;">
+        <center>
+      <div style="background-color:#f08080;height:25px;">
+        © 2021-2025 SKS Web Developers. All Rights Reserved.
+      </div>
+      </center>
+      </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
+        crossorigin="anonymous"></script>
+
+</body>
+
+</html>
